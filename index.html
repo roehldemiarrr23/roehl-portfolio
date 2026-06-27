@@ -367,10 +367,26 @@
       margin-bottom: 1.25rem;
       color: var(--muted);
     }
+    .portfolio-video-groups {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+    .portfolio-video-group-title {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
     .portfolio-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
       gap: 1.25rem;
+    }
+    .portfolio-grid--youtube {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     }
     .portfolio-item {
       display: flex;
@@ -390,6 +406,9 @@
       background: var(--bg);
       border: 1px solid var(--border);
       transition: transform 0.22s, box-shadow 0.22s;
+    }
+    .portfolio-video-card--youtube {
+      aspect-ratio: 16 / 9;
     }
     .portfolio-video-card:hover {
       transform: translateY(-4px);
@@ -866,50 +885,60 @@
       <div class="work-expand-panel" id="panel-video" aria-hidden="true">
         <div class="work-expand-panel-inner">
           <p class="portfolio-panel-title reveal">Video Editing Samples</p>
-          <div class="portfolio-grid portfolio-grid--video">
-            <div class="portfolio-item">
-              <div class="portfolio-video-card">
-                <iframe src="https://www.youtube.com/embed/Az49cV_N0_I" title="Video sample" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="portfolio-video-groups">
+            <div class="portfolio-video-group">
+              <h3 class="portfolio-video-group-title">YouTube</h3>
+              <div class="portfolio-grid portfolio-grid--youtube">
+                <div class="portfolio-item">
+                  <div class="portfolio-video-card portfolio-video-card--youtube">
+                    <iframe src="https://www.youtube.com/embed/Az49cV_N0_I" title="Video sample" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                  </div>
+                </div>
+                <div class="portfolio-item">
+                  <div class="portfolio-video-card portfolio-video-card--youtube">
+                    <iframe src="https://www.youtube.com/embed/BALbHCIgLoI" title="Video sample" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                  </div>
+                </div>
+                <div class="portfolio-item">
+                  <div class="portfolio-video-card portfolio-video-card--youtube">
+                    <iframe src="https://www.youtube.com/embed/MkHfG_n3YXc" title="Video sample" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="portfolio-item">
-              <div class="portfolio-video-card">
-                <iframe src="https://www.youtube.com/embed/BALbHCIgLoI" title="Video sample" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-              </div>
-            </div>
-            <div class="portfolio-item">
-              <div class="portfolio-video-card">
-                <iframe src="https://www.youtube.com/embed/59cmHzB2J5w" title="Video sample" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-              </div>
-            </div>
-            <div class="portfolio-item">
-              <div class="portfolio-video-card">
-                <iframe src="https://www.youtube.com/embed/x_rs5EOxsYA" title="Video sample" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-              </div>
-            </div>
-            <div class="portfolio-item">
-              <div class="portfolio-video-card">
-                <iframe src="https://www.youtube.com/embed/049fIPi2oKo" title="Video sample" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-              </div>
-            </div>
-            <div class="portfolio-item">
-              <div class="portfolio-video-card">
-                <iframe src="https://www.youtube.com/embed/9bwk878t_nM" title="Video sample" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-              </div>
-            </div>
-            <div class="portfolio-item">
-              <div class="portfolio-video-card">
-                <iframe src="https://www.youtube.com/embed/rbpa66ZRTY0" title="Video sample" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-              </div>
-            </div>
-            <div class="portfolio-item">
-              <div class="portfolio-video-card">
-                <iframe src="https://www.youtube.com/embed/YDDQYp41Ee4" title="Video sample" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-              </div>
-            </div>
-            <div class="portfolio-item">
-              <div class="portfolio-video-card">
-                <iframe src="https://www.youtube.com/embed/MkHfG_n3YXc" title="Video sample" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            <div class="portfolio-video-group">
+              <h3 class="portfolio-video-group-title">Shorts</h3>
+              <div class="portfolio-grid">
+                <div class="portfolio-item">
+                  <div class="portfolio-video-card">
+                    <iframe src="https://www.youtube.com/embed/59cmHzB2J5w" title="Video sample" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                  </div>
+                </div>
+                <div class="portfolio-item">
+                  <div class="portfolio-video-card">
+                    <iframe src="https://www.youtube.com/embed/x_rs5EOxsYA" title="Video sample" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                  </div>
+                </div>
+                <div class="portfolio-item">
+                  <div class="portfolio-video-card">
+                    <iframe src="https://www.youtube.com/embed/049fIPi2oKo" title="Video sample" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                  </div>
+                </div>
+                <div class="portfolio-item">
+                  <div class="portfolio-video-card">
+                    <iframe src="https://www.youtube.com/embed/9bwk878t_nM" title="Video sample" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                  </div>
+                </div>
+                <div class="portfolio-item">
+                  <div class="portfolio-video-card">
+                    <iframe src="https://www.youtube.com/embed/rbpa66ZRTY0" title="Video sample" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                  </div>
+                </div>
+                <div class="portfolio-item">
+                  <div class="portfolio-video-card">
+                    <iframe src="https://www.youtube.com/embed/YDDQYp41Ee4" title="Video sample" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
