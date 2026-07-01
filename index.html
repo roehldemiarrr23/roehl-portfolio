@@ -439,17 +439,30 @@
       object-fit: cover;
       display: block;
     }
-    .portfolio-image-card--page {
-      aspect-ratio: 16 / 10;
+    .portfolio-social-sections {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
     }
-    .portfolio-image-card--page img {
-      object-fit: cover;
-      object-position: top;
-    }
-    .portfolio-image-link {
+    .portfolio-page-link {
       display: block;
       color: inherit;
       text-decoration: none;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border-hi);
+      background: var(--bg);
+      transition: transform 0.22s, border-color 0.22s, box-shadow 0.22s;
+    }
+    .portfolio-page-link:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+    }
+    .portfolio-page-link img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
     .work-card::before {
       content: '';
@@ -965,8 +978,16 @@
       <!-- Social Media samples panel -->
       <div class="work-expand-panel" id="panel-social" aria-hidden="true">
         <div class="work-expand-panel-inner">
-          <p class="portfolio-panel-title reveal">Social Media Samples</p>
-          <div class="portfolio-grid">
+          <div class="portfolio-social-sections">
+            <div class="portfolio-social-section">
+              <h3 class="portfolio-video-group-title">Social Media Page</h3>
+              <a href="https://www.facebook.com/goodridesph" target="_blank" rel="noopener" class="portfolio-page-link">
+                <img src="./image.png" alt="Good Rides Facebook page — click to visit" loading="lazy" />
+              </a>
+            </div>
+            <div class="portfolio-social-section">
+              <h3 class="portfolio-video-group-title">Social Media Samples</h3>
+              <div class="portfolio-grid">
             <div class="portfolio-item">
               <div class="portfolio-image-card">
                 <img src="./476b1493-c21c-46ab-85cb-944c5e687947.jpeg" alt="Lemon Square — multi-flavor promo" loading="lazy" />
@@ -978,14 +999,6 @@
                 <img src="./a92aa394-53a2-4c37-9d9f-1a0c7459d4e7.jpeg" alt="Lemon Square — strawberry juice promo" loading="lazy" />
               </div>
               <span class="portfolio-item-label">Product Ad</span>
-            </div>
-            <div class="portfolio-item">
-              <a href="https://www.facebook.com/goodridesph" target="_blank" rel="noopener" class="portfolio-image-link">
-                <div class="portfolio-image-card portfolio-image-card--page">
-                  <img src="./image.png" alt="Good Rides Facebook page" loading="lazy" />
-                </div>
-              </a>
-              <span class="portfolio-item-label">Facebook Page</span>
             </div>
             <div class="portfolio-item">
               <div class="portfolio-image-card">
@@ -1028,6 +1041,8 @@
                 <img src="./6b7c8f27-5b87-4616-9116-b291a3bdbdc9.jpeg" alt="Good Rides professional dashboard analytics" loading="lazy" />
               </div>
               <span class="portfolio-item-label">Page Dashboard</span>
+            </div>
+              </div>
             </div>
           </div>
         </div>
